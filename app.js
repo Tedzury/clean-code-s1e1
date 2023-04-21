@@ -32,19 +32,22 @@ var createNewTaskElement=function(taskString){
     var deleteButton=document.createElement("button");//delete button
     var deleteButtonImg=document.createElement("img");//delete button image
 
+    listItem.classList.add('tasks-list-item')
     label.innerText=taskString;
-    label.className='task';
+    label.className='task-title';
 
     //Each elements, needs appending
     checkBox.type="checkbox";
+    checkBox.classList.add('is-done-checkbox')
     editInput.type="text";
     editInput.className="task";
 
     editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
-    editButton.className="edit";
+    editButton.className="btn edit";
 
-    deleteButton.className="delete";
+    deleteButton.className="btn delete";
     deleteButtonImg.src='./remove.svg';
+    deleteButtonImg.classList.add('delete-task-icon')
     deleteButton.appendChild(deleteButtonImg);
 
 
@@ -82,8 +85,8 @@ var editTask=function(){
 
     var listItem=this.parentNode;
 
-    var editInput=listItem.querySelector('input[type="text"]');
-    var label=listItem.querySelector("label");
+    var editInput=listItem.querySelector('.task');
+    var label=listItem.querySelector(".task-title");
     var editBtn=listItem.querySelector(".edit");
     var containsClass=listItem.classList.contains("edit-mode");
     //If class of the parent is .editmode
@@ -121,6 +124,8 @@ var taskCompleted=function(){
 
     //Append the task list item to the #completed-tasks
     var listItem=this.parentNode;
+    const label = listItem.querySelector('.task-title')
+    label.classList.add('task-title_done')
     completedTasksHolder.appendChild(listItem);
     bindTaskEvents(listItem, taskIncomplete);
 
@@ -133,6 +138,8 @@ var taskIncomplete=function(){
     //When the checkbox is unchecked
     //Append the task list item to the #incompleteTasks.
     var listItem=this.parentNode;
+    const label = listItem.querySelector('.task-title_done')
+    label.classList.remove('task-title_done')
     incompleteTaskHolder.appendChild(listItem);
     bindTaskEvents(listItem,taskCompleted);
 }
