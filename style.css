@@ -12,37 +12,34 @@
   text-align: right;
 }
 
-.logo-wrapper_img {
+.logo-wrapper__img {
   width: 100%;
 }
 
-.logo-wrapper,
-.more-inf {
+.logo-wrapper__more-inf {
   font-family: fantasy, cursive;
 }
 
 @media (max-width: 768px) {
-
   .logo-wrapper { 
     text-align: center;
   }
-
 }
 
-.main-list-wrapper {
+.main-list {
   display: block;
   width: 500px;
   margin: 0 auto 0;
 }
 
 .task, 
-.task-title {
+.tasks-list-item__task-title {
   width: 56%;
   display: inline-block;
   flex-grow: 1;
 }
 
-.task-row-wrapper {
+.add-element__task-row-wrapper {
   display: flex;
 }
 
@@ -74,7 +71,7 @@ input,button{
 }
 
 /* Heading */
-.section-title, 
+.section-title,
 [for="new-task"] {
   color: #333;
   font-weight: 700;
@@ -122,35 +119,35 @@ input,button{
   align-items: center;
 }
 
-.is-done-checkbox {
+.tasks-list-item__is-done-checkbox {
   margin: 0 10px;
 }
 
 .task, 
-.task-title {
+.tasks-list-item__task-title {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
 
-.new-task-input {
-  width: 226px;
+.add-element__new-task-input {
+  width: 226px
 }
 
-.delete-task-icon {
+.tasks-list-item__delete-icon {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-.delete-task-icon:hover {
+.tasks-list-item__delete-icon:hover {
   transform: rotateZ(0);
 }
 
 /* Completed */
 
-.task-title_done {
+.tasks-list-item__task-title_done {
   text-decoration: line-through;
   color: #888;
 }
@@ -162,10 +159,10 @@ input,button{
 }
 
 .edit-mode .task  {
-    display: inline-block;
-    width: 224px;
+  display: inline-block;
+  width: 224px;
 }
 
-.edit-mode .task-title {
-    display:none;
+.edit-mode .tasks-list-item__task-title {
+  display:none;
 }

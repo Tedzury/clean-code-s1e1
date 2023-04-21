@@ -34,20 +34,20 @@ var createNewTaskElement=function(taskString){
 
     listItem.classList.add('tasks-list-item')
     label.innerText=taskString;
-    label.className='task-title';
+    label.className='tasks-list-item__task-title';
 
     //Each elements, needs appending
     checkBox.type="checkbox";
-    checkBox.classList.add('is-done-checkbox')
+    checkBox.classList.add('tasks-list-item__is-done-checkbox')
     editInput.type="text";
     editInput.className="task";
 
     editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
-    editButton.className="btn edit";
+    editButton.className="btn tasks-list-item__edit_btn";
 
-    deleteButton.className="btn delete";
+    deleteButton.className="btn tasks-list-item__delete_btn";
     deleteButtonImg.src='./remove.svg';
-    deleteButtonImg.classList.add('delete-task-icon')
+    deleteButtonImg.classList.add('tasks-list-item__delete-icon')
     deleteButton.appendChild(deleteButtonImg);
 
 
@@ -86,8 +86,8 @@ var editTask=function(){
     var listItem=this.parentNode;
 
     var editInput=listItem.querySelector('.task');
-    var label=listItem.querySelector(".task-title");
-    var editBtn=listItem.querySelector(".edit");
+    var label=listItem.querySelector(".tasks-list-item__task-title");
+    var editBtn=listItem.querySelector(".tasks-list-item__edit_btn");
     var containsClass=listItem.classList.contains("edit-mode");
     //If class of the parent is .editmode
     if(containsClass){
@@ -124,8 +124,8 @@ var taskCompleted=function(){
 
     //Append the task list item to the #completed-tasks
     var listItem=this.parentNode;
-    const label = listItem.querySelector('.task-title')
-    label.classList.add('task-title_done')
+    const label = listItem.querySelector('.tasks-list-item__task-title')
+    label.classList.add('tasks-list-item__task-title_done')
     completedTasksHolder.appendChild(listItem);
     bindTaskEvents(listItem, taskIncomplete);
 
@@ -138,8 +138,8 @@ var taskIncomplete=function(){
     //When the checkbox is unchecked
     //Append the task list item to the #incompleteTasks.
     var listItem=this.parentNode;
-    const label = listItem.querySelector('.task-title_done')
-    label.classList.remove('task-title_done')
+    const label = listItem.querySelector('.tasks-list-item__task-title_done')
+    label.classList.remove('tasks-list-item__task-title_done')
     incompleteTaskHolder.appendChild(listItem);
     bindTaskEvents(listItem,taskCompleted);
 }
@@ -163,8 +163,8 @@ var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
     console.log("bind list item events");
 //select ListItems children
     var checkBox=taskListItem.querySelector("input[type=checkbox]");
-    var editButton=taskListItem.querySelector("button.edit");
-    var deleteButton=taskListItem.querySelector("button.delete");
+    var editButton=taskListItem.querySelector("button.tasks-list-item__edit_btn");
+    var deleteButton=taskListItem.querySelector("button.tasks-list-item__delete_btn");
 
 
     //Bind editTask to edit button.
