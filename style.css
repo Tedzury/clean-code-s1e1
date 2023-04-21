@@ -4,47 +4,59 @@
   color: #333;
   font-family: Lato, sans-serif;
 }
+
 .logo-wrapper {
   width: 500px;
   margin: 0 auto;
   display: block;
   text-align: right;
 }
+
 .logo-wrapper_img {
   width: 100%;
 }
+
 .logo-wrapper .more-inf {
   font-family: fantasy, cursive;
 }
 
 @media (max-width:768px) {
+
   .logo-wrapper { 
     text-align: center;
+  }
+
 }
-}
+
 .main-list-wrapper {
   display: block;
   width: 500px;
   margin: 0 auto 0;
 }
+
 .task, .task-title {
   width: 56%;
   display: inline-block;
   flex-grow: 1
 }
+
 .task-row-wrapper {
   display: flex;
 }
+
 ul {
   margin:0;
   padding: 0px;
 }
+
 li {
   list-style:none;
 }
+
 input,button{
   outline:none;
 }
+
 .btn {
   background: none;
   border: 0px;
@@ -54,12 +66,13 @@ input,button{
   font-family: Lato, sans-serif;
   cursor: pointer;
 }
+
 .btn:hover {
   color: #3a3A3a;
 }
+
 /* Heading */
-.section-title,
-[for="new-task"] {
+.section-title, [for="new-task"] {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -70,6 +83,7 @@ input,button{
   display: block;
   margin: 0 0 20px;
 }
+
 [type="text"] {
   margin: 0;
   font-size: 18px;
@@ -82,22 +96,24 @@ input,button{
   font-family: Lato, sans-serif;
   color: #888;
 }
+
 [type="text"]:focus {
   color: #333;
 }
 
 /* New Task */
+
 #new-task {
   width: 318px;
   display:inline-block;
 }
 
 /* Task list */
+
 .tasks-list-item {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -106,25 +122,30 @@ input,button{
 .is-done-checkbox {
   margin: 0 10px;
 }
+
 .task, .task-title {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
+
 .new-task-input {
   width: 226px
 }
+
 .delete-task-icon {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
+
 .delete-task-icon:hover {
   transform: rotateZ(0);
 }
 
 /* Completed */
+
 .task-title_done {
   text-decoration: line-through;
   color: #888;
@@ -135,6 +156,7 @@ input,button{
 .task {
   display:none
 }
+
 .edit-mode .task  {
     display:inline-block;
     width:224px
