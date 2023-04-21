@@ -16,7 +16,8 @@
   width: 100%;
 }
 
-.logo-wrapper .more-inf {
+.logo-wrapper,
+.more-inf {
   font-family: fantasy, cursive;
 }
 
@@ -34,7 +35,8 @@
   margin: 0 auto 0;
 }
 
-.task, .task-title {
+.task, 
+.task-title {
   width: 56%;
   display: inline-block;
   flex-grow: 1;
@@ -72,7 +74,8 @@ input,button{
 }
 
 /* Heading */
-.section-title, [for="new-task"] {
+.section-title, 
+[for="new-task"] {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -123,7 +126,8 @@ input,button{
   margin: 0 10px;
 }
 
-.task, .task-title {
+.task, 
+.task-title {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
