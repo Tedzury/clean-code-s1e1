@@ -73,9 +73,8 @@ button {
   color: #3a3A3a;
 }
 
-/* Heading */
 .section-title,
-[for="new-task"] {
+.add-elem__task-label {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -87,7 +86,7 @@ button {
   margin: 0 0 20px;
 }
 
-[type="text"] {
+.task {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -100,18 +99,9 @@ button {
   color: #888;
 }
 
-[type="text"]:focus {
+.task:focus {
   color: #333;
 }
-
-/* New Task */
-
-#new-task {
-  width: 318px;
-  display: inline-block;
-}
-
-/* Task list */
 
 .task-item {
   overflow: hidden;
@@ -148,14 +138,10 @@ button {
   transform: rotateZ(0);
 }
 
-/* Completed */
-
 .task-item__title_done {
   text-decoration: line-through;
   color: #888;
 }
-
-/* Edit Task */
 
 .task {
   display: none;
@@ -167,5 +153,10 @@ button {
 }
 
 .edit-mode .task-item__title {
-  display:none;
+  display: none;
+}
+
+.add-elem__task-input {
+  width: 318px;
+  display: inline-block;
 }
